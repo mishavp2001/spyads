@@ -1,0 +1,25 @@
+<div id="full-pane">
+  <h1>List  Rulesets</h1>
+
+  <table>
+    <tr>
+      <th align="left">ID</th>
+      <th align="left">Name</th>
+      <th align="left">Actions</th>
+    </tr>
+
+  <% @rulesets.each do |ruleset| %>
+    <tr>
+      <td><%= ruleset.id %></td>
+      <td width="100px"><%= ruleset.name %></td>
+      <td><%= link_to 'Show', ruleset %>&nbsp;
+          <%= link_to 'Edit', edit_ruleset_path(ruleset) %>&nbsp;
+          <%= link_to 'Destroy', ruleset, confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
+  <% end %>
+  </table>
+
+  <br />
+
+  <%= link_to 'New Ruleset', new_ruleset_path %>
+</div>

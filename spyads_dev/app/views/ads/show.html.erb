@@ -1,0 +1,10 @@
+<div id="full-pane" class="show-pane">
+  <p id="notice"><%= notice %></p>
+
+  <%= content_tag(:h2," Ad '#{@ad.ad_title}'" ) %>
+  <%= content_tag(:div, display_ad(@ad,false), :class=>"gray_div") %>
+
+</div>
+
+<%= link_to 'Edit', edit_ad_path(@ad) %> |
+<%= link_to 'Back', ads_path %>

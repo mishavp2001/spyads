@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spy&Serve</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="main">
+  <div id="header">
+    <h1><a href="/" style="padding:20px; background-color: steelblue; text-decoration: none;color:#ffffff; border-radius: 20px; 250px 0 250px 0">Spy&Serve</a> - Quick and easy way to rapidly publish relevant offers to your users</h1>
+    <div style="margin-top: -10px; text-align: center; color: white; font-size: 22px; margin:10px; width: 100%;">
+      <div style="position:relative; width: 100px; display:inline-block; background-color: black; padding: 20px; border-radius: 10px 10px 10px 10px;">
+        <%=link_to "Rulesets", "/rulesets"%>
+      </div>
+      <div style="position:relative; width: 100px;  display:inline-block; background-color: black; padding: 20px; border-radius: 10px 10px 10px 10px;">
+        <%=link_to "Ads", "/ads"%>
+    </div>
+    </div>
+
+  </div >
+    <%= yield %>
+  <div id="fotter">
+  </end>
+</div>
+</body>
+</html>

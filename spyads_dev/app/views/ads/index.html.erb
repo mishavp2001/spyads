@@ -1,0 +1,40 @@
+<div id="full-pane">
+  <h1>List of Ads</h1>
+
+  <table>
+    <tr>
+      <%= content_tag(:th, "ID") %>
+      <%= content_tag(:th, "Product image") %>
+      <%= content_tag(:th, "Product link") %>
+      <%= content_tag(:th, "Product name") %>
+      <%= content_tag(:th, "Tracking") %>
+      <%= content_tag(:th, "Title") %>
+      <%= content_tag(:th, "Body") %>
+      <%#= content_tag(:th, "Active") %>
+      <%= content_tag(:th, "") %>
+      <%= content_tag(:th, "") %>
+      <%= content_tag(:th, "") %>
+    </tr>
+
+  <% @ads.each do |ad| %>
+    <tr>
+      <%= content_tag(:td, ad.id ) %>
+      <%= content_tag(:td, shorten_url(ad.product_image) ) %>
+      <%= content_tag(:td, ad.product_link ) %>
+      <%= content_tag(:td, ad.product_name ) %>
+      <%= content_tag(:td, ad.ad_tracking ) %>
+      <%= content_tag(:td, ad.ad_title ) %>
+      <%= content_tag(:td, ad.ad_body ) %>
+      <%#= content_tag(:td, ad.is_active ) %>
+      <%= content_tag(:td, link_to( 'Show', ad) ) %>
+      <%= content_tag(:td, link_to( 'Edit', edit_ad_path(ad)) ) %>
+      <%= content_tag(:td, link_to( 'Destroy', ad, confirm: 'Are you sure?', method: :delete) ) %>
+    </tr>
+  <% end %>
+  </table>
+
+<br />
+
+<%= link_to 'New Ad', new_ad_path %>
+
+</div>

@@ -1,0 +1,54 @@
+<%= form_for(@ad) do |f| %>
+  <% if @ad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ad.errors.count, "error") %> prohibited this ad from being saved:</h2>
+
+      <ul>
+      <% @ad.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ad_title %>  
+    <%= f.text_field :ad_title %>
+  </div>
+  <div class="field">
+    <%= f.label :product_name %>  
+    <%= f.text_field :product_name %>
+  </div>
+  <div class="field">
+    <%= f.label :ad_tracking %>  
+    <%= f.text_field :ad_tracking %>
+  </div>
+
+  <p class="strong">Add an image OR your own HTML code:</p>
+  <div class="group-fields">
+    <h3>Image Ad</h3>
+    <div class="field">
+      <%= f.label :product_image %>
+      <%= f.text_field :product_image, :class=>'longer' %>
+    </div>
+    <div class="field">
+      <%= f.label :product_link  %>  
+      <%= f.text_field :product_link, :class=>'longer' %>
+    </div>
+  </div>
+  <p class="strong"> OR </p>
+  <div class="group-fields">
+    <h3>HTML Ad</h3>
+    <div class="field">
+      <%= f.label :ad_body %>  
+      <%= f.text_area :ad_body, :class=>'longer' %>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :is_active %>  
+    <%= f.check_box :is_active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

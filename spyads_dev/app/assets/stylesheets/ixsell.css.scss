@@ -1,0 +1,264 @@
+// Place all the styles related to the Ixsell controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.error {
+  min-height: 40px;    
+  border-top: 1px solid #ccc;
+  padding: 5px;
+  font: Verdana, Arial, Helvetica, Geneva, sans-serif;
+  font-size: 18pt;  
+  color: red;
+}
+.strong{
+  font-weight: bold;
+}
+.question{
+  color:#365EBF;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+}
+#header {
+  h1{
+    text-align: center;
+    margin: 10 0 10px 0;
+    color:#365EBF;
+  } 
+  h2{
+    color:grey;
+    margin: 15px 0 ;    
+    text-align: center;
+  }
+}
+.show-pane,.group-fields{
+  -moz-border-radius-topleft:5px;
+  -webkit-border-top-left-radius:5px;
+  -moz-border-radius-topright:5px;
+  -webkit-border-top-right-radius:5px;	
+  -moz-border-radius-bottomleft:5px;
+  -webkit-border-bottom-left-radius:5px;	
+  -moz-border-radius-bottomrightt:5px;
+  -webkit-border-bottom-rigtht-radius:5px;	
+ border: 1px solid #D0D0D0;
+  border-right: 3px solid #D0D0D0;
+  border-bottom: 3px solid #D0D0D0;
+  padding: 10px 20px;
+  margin: 15px 30px;
+}
+#full-pane.show-pane{
+  background-color:#F8F8F8;
+  width:80%;
+}
+#full-pane {
+  font: normal 93%/116.6% Verdana, Arial, Helvetica, Geneva, sans-serif;
+  padding: 10px 10px;
+  width: 96%;
+  form {
+    border: 1px solid #365EBF;
+    -moz-border-radius-topleft:8px;
+    -webkit-border-top-left-radius:8px;
+    -moz-border-radius-bottomright:8px;
+    -webkit-border-top-right-radius:8px;
+    -webkit-border-bottom-left-radius:8px;
+    -moz-border-radius-bottomright:8px;
+    -webkit-border-bottom-right-radius:8px;
+    padding: 10px 0 5px 20px;
+    margin: 0 0 5px 0;
+    background-color:#F8F8F8;
+     label {
+      color: grey;
+      margin:5px 0 3px 0;
+      display:block;
+    }
+    input[type="text"], textarea, select{
+      display:block;
+      margin-left: 25px;
+    }
+    input[type="submit"]{
+      background-color:powderBlue;
+      border: 1px solid #CCC;
+      margin: 10px 0 10px 400px;
+      padding: 10px 10px;
+    }
+    input[type="text"].longer, input[type="password"].longer, textarea.longer{
+      width: 65em;
+      margin-bottom: 10px;
+      height: 60px;
+    }
+  }
+  title {
+    font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+    font-size: 153.9%;
+    margin: 0px;
+      color: #000;
+  }
+  h1{
+    color: #FFFFFF;
+    padding: 10;
+    margin: 0 0 10px 0;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight:normal;
+  }
+  h2{
+    color: #FFFFFF;
+    margin: 10px 0;
+    padding: 10px;
+  }  
+  h3 {
+    font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+    font-size: 138.5%;
+    margin: 0 0 5px 0;
+    color: #6699FF;
+    text-decoration:underline;
+  }
+   table {
+    font: normal 12px/116.6%  Verdana, Arial, Helvetica, Geneva, sans-serif;
+    margin:10px 10px;
+    border: 1px solid powderBlue;
+    th {
+      font-weight: bold;
+      border-right: 1px solid powderBlue;
+      border-bottom: 2px solid powderBlue;
+      margin: 0;
+      padding: 5px 5px;
+    }
+     td {
+      margin:0;
+      padding:2px 2px;
+      border-right: 1px solid powderBlue;
+    }
+    td.a_label{
+      text-align:right;
+      padding-right:6px;
+    }
+  }
+  label {
+    position: relative;
+  }
+  #interstitial{
+    position:relative;
+    top:0;
+    right:0;
+  }
+  input.l_input,
+  textarea.l_input{
+    width:50em;
+  }
+  a {
+    color: brown;
+    &:visited {
+      color: brown; }
+    &:hover {
+      color: lightstellblue;
+      background-color: #000; }
+  }
+  
+}
+
+
+#full-pane #notice,
+.flash-notice {
+  font-size: 138.5%;
+  line-height:140%; 
+  color: green; 
+  padding: 5px 0 5px 20px; 
+}
+
+#full-pane #error,
+.flash-error {
+  font-size: 138.5%; 
+  line-height:140%; 
+  color: red; 
+  padding: 0 0 5px 20px; 
+}
+
+
+
+
+.bkGray,
+tr.bkGray,
+tr.bkGray td{
+ background-color:#EEE !important;
+}
+
+.bkWhite,
+tr.bkWhite,
+tr.bkWhite td{
+ background-color:#FFF !important;
+}
+
+.delete-user-badge {
+  background: transparent url(/images/button/icn-delete-hover.gif) no-repeat top right;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  padding: 0px 5px;
+}
+
+#logo {
+background:transparent url(/images/logo/atc_panel_header.gif) no-repeat scroll 10px 15px;
+height:55px;
+margin:0;
+padding:0;
+width:220px;
+}
+
+
+#main {
+  margin:0;
+  padding:20px;
+  text-align: center;
+}
+#header a {
+  color: #FFFFFF;
+}
+
+
+div.gray_div {
+  background-color: #F3F3F3;
+  border: 1px dashed #000;
+  border-width: 1px 0 1px 0;
+  margin:5px 0 !important;
+  padding: 10px 10px !important;
+}
+
+
+fieldset{
+  border:solid thin #ccc;
+  padding: 13px;
+  width: 659px;
+}
+legend {
+  padding:0 2px;
+}
+
+
+
+.spacer{
+  margin: 5px 0;
+  padding:0;
+}
+
+.admin_button{
+  background-color:PowderBlue;
+  margin: 20px 0 0 0;
+  padding: 3px;
+  border:1px solid #ccc;
+  -moz-border-radius-topleft:3px;
+  -webkit-border-top-left-radius:3px;
+  -moz-border-radius-topright:3px;
+  -webkit-border-top-right-radius:3px;  
+}
+
+
+#x-ad {
+  .content {
+  float: left;
+  width: 320px;
+  padding: 0 0 20px 20px;
+  }
+}
+

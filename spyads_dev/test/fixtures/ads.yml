@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  product_image: MyString
+  product_link: MyString
+  product_name: MyString
+  tracking_id: MyString
+  body: MyText
+  is_active: false
+
+two:
+  product_image: MyString
+  product_link: MyString
+  product_name: MyString
+  tracking_id: MyString
+  body: MyText
+  is_active: false

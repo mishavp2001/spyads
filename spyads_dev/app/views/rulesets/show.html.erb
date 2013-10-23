@@ -1,0 +1,23 @@
+<div id="full-pane" class="show-pane">
+  <p id="notice"><%= notice %></p>
+
+  <b>Name:</b>
+  <%= @ruleset.name %><br><br>
+  <b>Rules:</b><br>
+  <table>
+    <tr>
+      <th>Product ownership</th>
+      <th>User details</th>
+    </tr>
+
+  <% @ruleset.rules.each do |rule| %>
+    <tr>
+      <td><%= rule.product_ownership %></td>
+      <td><%= rule.user_details %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+<br><br>
+<%= link_to 'Edit', edit_ruleset_path(@ruleset) %> |
+<%= link_to 'Back', rulesets_path %>

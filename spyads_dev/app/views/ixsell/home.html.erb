@@ -1,0 +1,38 @@
+<div style="text-align: left; color: white; font-size: 22px; top: 600px; position: absolute; margin: 10px; width: 97%;">
+  <div style=" background-color: blue; position:relative;height: 100px; opacity: 0.2; border-radius: 10px;">
+  </div>
+
+ <div style="padding: 20px;margin: 20px;float:left;color:black; background-color: blue;border-radius: 10px;width:400px; position:relative; top:-108px;">
+   <h1>Before</h1>
+   <div id="contextBefore" style="background-color: white;height:400px; padding: 10px;">
+    <iframe src='http://qa-ext.sr.qbinproduct.intuit.com/las_box_takeover' width='100%' height='100%'></iframe>
+    </div>
+ </div>
+
+ <div style="padding: 20px;margin: 20px;float:right;color:black; background-color: lawngreen; border-radius: 10px;width:400px;position:relative; top:-108px;">
+   <h1>After</h1>
+   <div id="contextAfter" style="background-color: white;height:400px; padding: 10px;">
+     <iframe id='i-las' src='/ixsell/query?ad_id=1' width='100%' height='100%'></iframe>
+     <script>
+
+         var timeoutID;
+
+
+         function setOffer(){
+             var i = Math.floor((Math.random()*10)+1)
+            $('#i-las')[0].src = '/ixsell/query?ad_id=' + i.toString() ;
+         }
+         setInterval(setOffer, 3000);
+         </script>
+   </div>
+ </div>
+</div>
+
+<img src="assets/hackideas.png" height="60%" width="60%" alt="hack idea">
+<%=content_tag(:div,"Q: What is this and how does it work?", :class=>'question')  %>
+it's really easy:
+  <li style="margin-left:10px">Add SpyScript to your page and read cookie</li>
+
+Really, it's that simple.
+
+

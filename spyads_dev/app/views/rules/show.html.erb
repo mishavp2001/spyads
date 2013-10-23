@@ -1,0 +1,23 @@
+<div id="full-pane" class="show-pane">
+<%= content_tag(:h1,"Rule")%>
+<p id="notice"><%= notice %></p>
+  <p>
+    <b>Product Rules: </b>
+    <%= @rule.product_ownership %>
+  </p>
+  <p>
+    <b>User Rules: </b>
+    <%= @rule.user_details %>
+  </p>
+  <p>
+    <% unless @rule.ad_id.blank? %>
+      <% ad = @rule.ad %>
+      <b>Ad: </b>'<%=ad.product_name%>'  <%= link_to('View HTML', ad ) %> |  <%= link_to('View JSON', {:controller => "ads", :id => ad,:format => :json}) %>
+    <% else %>
+      <b>Ad not found</b>
+    <% end %>
+  </p>
+</div>
+<br>
+<%= link_to 'Edit', edit_ruleset_rule_path(@ruleset, @rule) %> |
+<%= link_to 'Back', ruleset_rules_path(@ruleset) %>

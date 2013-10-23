@@ -1,0 +1,23 @@
+<br><br>
+<b>Rules:</b><br>
+
+<table>
+  <tr>
+    <th>Product ownership</th>
+    <th>User details</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ruleset.rules.each do |rule| %>
+  <tr>
+    <td><%= rule.product_ownership %></td>
+    <td><%= rule.user_details %></td>
+    <td><%= link_to 'Show', [@ruleset, rule] %></td>
+    <td><%= link_to 'Edit', edit_ruleset_rule_path(@ruleset, rule) %></td>
+    <td><%= link_to 'Destroy', [@ruleset, rule], confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to 'New Rule', new_ruleset_rule_path(@ruleset) %><br><br>
